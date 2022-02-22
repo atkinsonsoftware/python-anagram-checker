@@ -1,5 +1,9 @@
 import argparse
 
+def returnPrimeFactors(num):
+    if type(num) != int:
+        raise TypeError("Int required for prime factor list")
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("value", type=int)
