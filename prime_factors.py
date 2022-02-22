@@ -4,6 +4,15 @@ def returnPrimeFactors(num):
     if type(num) != int:
         raise TypeError("Int required for prime factor list")
 
+    factors = []
+    for i in range(2, num):
+        if (num % i == 0):
+            # If there are existing prime factors, check that this is not
+            # a multiple of any
+            if not any(i % f == 0 for f in factors[:]):
+                factors.append(i) # First prime factor
+    return factors
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("value", type=int)
@@ -11,21 +20,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     value = args.value
 
-    print(value)
-    factors = []
-    for i in range(2, value):
-        if (value % i == 0):
-            print("Testing i: %d" % i)
-            if len(factors) > 1:
-                for f in factors[:]:
-                    if (i % f == 0):
-                        print(" not adding i %d" % i)
-                        print(" because factor f %d already counted" % f)
-                        break
-                    else:
-                        factors.append(i)
-                        break
-            else:
-                factors.append(i)
-
-    print("%d's factors are: %s" % (value, factors))
+    print("%d's prime factors are: %s" % (value, returnPrimeFactors(value)))
