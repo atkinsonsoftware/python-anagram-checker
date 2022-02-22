@@ -36,6 +36,8 @@ class TestCleanWords(unittest.TestCase):
         self.assertNotEqual(anagram.cleanWords(["1.234number889s09","1ab4"]),
                          ["1.234numbers889s09","1ab4"])
 
+class TestCheckAnagram(unittest.TestCase):
+
     # Following tests check anagrams
     def test_anagrams(self):
         self.assertTrue(anagram.checkAnagram(["melon", "lemon"]))
