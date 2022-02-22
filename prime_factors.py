@@ -5,7 +5,8 @@ def returnPrimeFactors(num):
         raise TypeError("Int required for prime factor list")
 
     factors = []
-    for i in range(2, num):
+    # Prime numbers begin with 2, and entered number itself could be a prime
+    for i in range(2, num + 1):
         if (num % i == 0):
             # If there are existing prime factors, check that this is not
             # a multiple of any
