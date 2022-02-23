@@ -1,6 +1,10 @@
 import argparse
 from anagram import cleanWords
 
+def checkPalindromeQuick(word):
+    clean_word = cleanWords(word)
+    return (clean_word == clean_word[::-1])
+
 def checkPalindrome(word):
     # Each word must be at least 3 characters in length
     if len(word) < 2:
@@ -39,3 +43,7 @@ if __name__ == "__main__":
 
     for word in words:
         checkPalindrome(word)
+
+    for word in words:
+        print("Quick check of word %s shows it is a palindrome? %s" %
+              (word, checkPalindromeQuick(word)))
