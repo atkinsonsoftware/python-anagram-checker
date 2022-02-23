@@ -41,3 +41,17 @@ if __name__ == "__main__":
     str2 = str2[len(str1):]
     print(str1)
     print(str2)
+
+    # swap arrays
+    arr1 = ["a", "b", "c"]
+    arr2 = [1, 2, 3]
+    print(arr1)
+    print(arr2)
+    # Concatenate; place in second var
+    arr2 = arr2 + arr1
+    # Update first by grabbing array items up to length of first array
+    arr1 = arr2[:len(arr1)]
+    # Update second by grabbing array items past length of first array
+    arr2 = arr2[len(arr1):]
+    print(arr1)
+    print(arr2)
