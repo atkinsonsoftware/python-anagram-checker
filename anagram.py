@@ -43,12 +43,10 @@ def checkAnagram(word_list):
     # Sort lists of each word; compare lists!!
     first_word_sorted = list(first_word)
     first_word_sorted.sort()
-    for word in clean_words[1:]:
-        list_word_sorted = list(word)
-        list_word_sorted.sort()
-        if (first_word_sorted != list_word_sorted):
-            print("Characters are repeated differently in the words.")
-            return False
+    if (any(sorted(list(word)) != first_word_sorted for word in clean_words[1:])):
+        print("Characters are repeated differently in the words.")
+        return False
+
     return True
 
 if __name__ == "__main__":
