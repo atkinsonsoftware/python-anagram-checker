@@ -9,11 +9,7 @@ def cleanWords(word_list):
         return new_word
     else:
         clean_words = []
-        for word in word_list:
-            new_word = word.lower()
-            new_word = re.sub("[^a-z]", "", new_word)
-            clean_words.append(new_word)
-        return clean_words
+        return [re.sub("[^a-z]", "", word.lower()) for word in word_list]
 
 def checkAnagram(word_list):
     # There must be at least 2 items to compare
