@@ -9,3 +9,8 @@ This repository contains files completing the following tasks:
  * List an integer's prime factors
  * Remove duplicates from a list (using set, not using set)
  * Swap numeric values without utilizing a third variable
+ * Basic calculator to handle +-*/ operations on two numbers
+ * Fibonacci sequence
+ * Flatten list
+ * Find first non-repeated character
+ * Remove duplicates from a list (using set, using dictionary)
