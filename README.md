@@ -14,3 +14,7 @@ This repository contains files completing the following tasks:
  * Flatten list
  * Find first non-repeated character
  * Remove duplicates from a list (using set, using dictionary)
+ * Check if # X's equals # O's
+ * Petty-print non-negative numbers into comma-separated numbers
+ * Type-check that both given values are integers
+ * Return prime factors of given integer
