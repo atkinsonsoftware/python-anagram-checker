@@ -18,7 +18,18 @@ def flatten(list_to_flatten):
     print(flat_list)
     return flat_list
 
+def flattenListRecursion(items):
+    '''Flatten list using recursion'''
+    if not bool(items):
+        return items
+    elif type(items[0]) == list and len(items[0]) != 0:
+        return flattenListRecursion(*items[:1]) + flattenListRecursion(items[1:])
+    return items[:1] + flattenListRecursion(items[1:])
+
 if __name__ == "__main__":
     bumpy_list = [1, 2, 3, ['a', 'b', ['ac'], 'c'], 4]
     print(bumpy_list)
     print(flatten(bumpy_list))
+    print("About to use recursion")
+    bumpy_list = [1, 2, 3, ['a', 'b', ['ac'], 'c'], 4]
+    print(flattenListRecursion(bumpy_list))
